@@ -1,0 +1,193 @@
+{
+  "base_date": "2026-01-01",
+  "total": 33,
+  "by_category": {
+    "제조업": 2,
+    "건설업": 1,
+    "도매 및 소매업": 5,
+    "숙박 및 음식점업": 1,
+    "정보통신업": 2,
+    "정보서비스업": 2,
+    "금융 및 보험업": 1,
+    "부동산업": 1,
+    "전문서비스업": 2,
+    "수의업": 1,
+    "사업 지원 서비스업": 3,
+    "임대업": 1,
+    "공공행정, 국방 및 사회보장 행정": 1,
+    "교육서비스업": 2,
+    "보건업": 1,
+    "예술, 스포츠 및 여가관련 서비스업": 3,
+    "협회 및 단체": 1,
+    "기타 개인 서비스업": 1,
+    "가구 내 고용 및 자가소비 생산활동": 1,
+    "국제 및 외국기관": 1
+  },
+  "rules": [
+    {
+      "category": "제조업",
+      "industry_code": "33402 中",
+      "description": "불건전 영상게임기 제조업"
+    },
+    {
+      "category": "제조업",
+      "industry_code": "33409 中",
+      "description": "도박기계 및 사행성, 불건전 오락기구 제조업"
+    },
+    {
+      "category": "건설업",
+      "industry_code": "41～42",
+      "description": "건설업(단, 산업 생산시설 종합 건설업(41225), 환경설비 건설업(41224), 조경 건설업(41226), 배관 및 냉·난방 공사업(42201), 건물용 기계·장비 설치 공사업(42202), 승강설비 설치 공사업(42203), 방음, 방진 및 내화 공사업(42204), 소방시설 공사업(42205), 전기 및 통신공사업(423)은 지원가능 업종)"
+    },
+    {
+      "category": "도매 및 소매업",
+      "industry_code": "46102 中",
+      "description": "담배 중개업"
+    },
+    {
+      "category": "도매 및 소매업",
+      "industry_code": "46~47 中",
+      "description": "도박기계 및 사행성, 불건전 오락기구 중개 및 도소매업, 사행성, 사치성 상품 중개업 및 도소매업, 주류, 담매 소매업"
+    },
+    {
+      "category": "도매 및 소매업",
+      "industry_code": "46331, 3",
+      "description": "주류, 담배 도매업"
+    },
+    {
+      "category": "도매 및 소매업",
+      "industry_code": "47859 中",
+      "description": "성인용품 판매점"
+    },
+    {
+      "category": "도매 및 소매업",
+      "industry_code": "47993 中",
+      "description": "다단계 방문판매"
+    },
+    {
+      "category": "숙박 및 음식점업",
+      "industry_code": "5621",
+      "description": "주점업"
+    },
+    {
+      "category": "정보통신업",
+      "industry_code": "58 中",
+      "description": "경마, 경륜, 경정 등 사행성 잡지 발행업, 불건전 게임소프트웨어 개발 및 공급업"
+    },
+    {
+      "category": "정보통신업",
+      "industry_code": "59142",
+      "description": "비디오물 감상실 운영업"
+    },
+    {
+      "category": "정보서비스업",
+      "industry_code": "63992",
+      "description": "가상자산 매매 및 중개업"
+    },
+    {
+      "category": "정보서비스업",
+      "industry_code": "63999 中",
+      "description": "온라인게임 아이템 중개업"
+    },
+    {
+      "category": "금융 및 보험업",
+      "industry_code": "64～66",
+      "description": "금융 및 보험업(단, 정보통신기술을 활용한 핀테크 기업 중 그 외 기타 금융 지원 서비스업(66199)은 지원 가능)"
+    },
+    {
+      "category": "부동산업",
+      "industry_code": "68",
+      "description": "부동산업"
+    },
+    {
+      "category": "전문서비스업",
+      "industry_code": "711~2",
+      "description": "법무, 회계 및 세무 관련 서비스업"
+    },
+    {
+      "category": "전문서비스업",
+      "industry_code": "7151",
+      "description": "회사본부"
+    },
+    {
+      "category": "수의업",
+      "industry_code": "731",
+      "description": "수의업"
+    },
+    {
+      "category": "사업 지원 서비스업",
+      "industry_code": "75330",
+      "description": "탐정 및 조사 서비스업"
+    },
+    {
+      "category": "사업 지원 서비스업",
+      "industry_code": "75995 中",
+      "description": "온라인을 통한 경품용 상품권 발행업 또는 판매업"
+    },
+    {
+      "category": "사업 지원 서비스업",
+      "industry_code": "75999 中",
+      "description": "경품용 상품권 발행업 또는 판매업"
+    },
+    {
+      "category": "임대업",
+      "industry_code": "76390 中",
+      "description": "도박기계 및 사행성, 불건전 오락기구 임대업"
+    },
+    {
+      "category": "공공행정, 국방 및 사회보장 행정",
+      "industry_code": "84",
+      "description": "공공행정, 국방 및 사회보장 행정"
+    },
+    {
+      "category": "교육서비스업",
+      "industry_code": "851~854",
+      "description": "초중고등 교육기관 및 특수학교"
+    },
+    {
+      "category": "교육서비스업",
+      "industry_code": "855~856 中",
+      "description": "일반교과 및 입시 교육"
+    },
+    {
+      "category": "보건업",
+      "industry_code": "86",
+      "description": "보건업 (단, 사회적경제기업은 지원 가능)"
+    },
+    {
+      "category": "예술, 스포츠 및 여가관련 서비스업",
+      "industry_code": "91113",
+      "description": "경주장 및 동물 경기장 운영업"
+    },
+    {
+      "category": "예술, 스포츠 및 여가관련 서비스업",
+      "industry_code": "9124",
+      "description": "사행시설 관리 및 운영업"
+    },
+    {
+      "category": "예술, 스포츠 및 여가관련 서비스업",
+      "industry_code": "91291",
+      "description": "무도장 운영업"
+    },
+    {
+      "category": "협회 및 단체",
+      "industry_code": "94",
+      "description": "협회 및 단체 (단, 중소기업 기본법 제2조 중소기업자에 해당하는 경우 지원가능)"
+    },
+    {
+      "category": "기타 개인 서비스업",
+      "industry_code": "96992",
+      "description": "점술 및 유사서비스업"
+    },
+    {
+      "category": "가구 내 고용 및 자가소비 생산활동",
+      "industry_code": "97～98",
+      "description": "가구 내 고용활동 및 별도로 분류되지 않는 자가소비 생산활동"
+    },
+    {
+      "category": "국제 및 외국기관",
+      "industry_code": "99",
+      "description": "국제 및 외국기관"
+    }
+  ]
+}
