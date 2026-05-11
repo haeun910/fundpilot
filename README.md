@@ -23,15 +23,105 @@
 
 ```
 fundpilot/
+│
 ├── apps/
-│   ├── web/          # Next.js 프론트엔드
-│   └── api/          # FastAPI 백엔드
+│   │
+│   ├── web/                          # Next.js 14 (App Router)
+│   │   ├── app/
+│   │   │   ├── page.tsx              # 기업 정보 입력 (메인)
+│   │   │   ├── result/
+│   │   │   │   └── page.tsx          # 분석 결과
+│   │   │   ├── compare/
+│   │   │   │   └── page.tsx          # 정책자금 비교
+│   │   │   ├── layout.tsx
+│   │   │   └── globals.css
+│   │   │
+│   │   ├── components/
+│   │   │   ├── form/
+│   │   │   │   ├── CompanyForm.tsx   # 기업 정보 입력 폼
+│   │   │   │   ├── IndustrySelect.tsx
+│   │   │   │   └── FormField.tsx
+│   │   │   │
+│   │   │   ├── result/
+│   │   │   │   ├── FundCard.tsx      # 추천 정책자금 카드
+│   │   │   │   ├── RiskBadge.tsx     # 리스크 등급 배지
+│   │   │   │   ├── EligibilityTag.tsx # 신청가능/제한 태그
+│   │   │   │   └── FeatureBar.tsx    # 영향 요소 바 차트
+│   │   │   │
+│   │   │   ├── chart/
+│   │   │   │   ├── SuitabilityChart.tsx  # 적합도 차트 (Recharts)
+│   │   │   │   ├── RadarChart.tsx        # 기업 비교 레이더
+│   │   │   │   └── ContributionBar.tsx   # XAI 기여도 바
+│   │   │   │
+│   │   │   └── ui/
+│   │   │       ├── Button.tsx
+│   │   │       ├── Badge.tsx
+│   │   │       ├── Card.tsx
+│   │   │       └── Tooltip.tsx
+│   │   │
+│   │   ├── lib/
+│   │   │   ├── api.ts               # FastAPI 호출 함수
+│   │   │   ├── types.ts             # 공통 타입 정의
+│   │   │   └── constants.ts         # 업종 목록, 지역 등
+│   │   │
+│   │   ├── package.json
+│   │   ├── next.config.ts
+│   │   └── tailwind.config.ts
+│   │
+│   └── api/                         # FastAPI (Python 3.11)
+│       ├── main.py                  # 앱 진입점, CORS 설정
+│       │
+│       ├── routers/
+│       │   ├── __init__.py
+│       │   ├── analyze.py           # POST /analyze (신청가능여부)
+│       │   ├── recommend.py         # POST /recommend (TOP5 추천)
+│       │   └── risk.py              # POST /risk (리스크 분석)
+│       │   └── funds.py             # GET  /funds   — 자금 정보 조회
+│       ├── services/
+│       │   ├── __init__.py
+│       │   ├── rule_engine.py       # 융자제외업종 + 부채비율 검증
+│       │   ├── recommender.py       # Cosine Similarity 추천
+│       │   ├── risk_analyzer.py     # Isolation Forest 리스크
+│       │   └── explainer.py         # Feature Contribution (XAI)
+│       │
+│       ├── schemas/
+│       │   ├── __init__.py
+│       │   └── models.py            # Pydantic 요청/응답 스키마
+│       │
+│       ├── core/
+│       │   ├── __init__.py
+│       │   └── config.py            # 환경변수, 데이터 경로 설정
+│       │
+│       ├── requirements.txt
+│       └── Dockerfile
+│
 ├── packages/
-│   └── ml/           # AI/ML 모듈
-└── data/
-    ├── raw/          # 원본 공공데이터 CSV
-    ├── processed/    # 전처리 결과 JSON
-    └── scripts/      # 전처리 스크립트
+│   └── ml/                          # AI/ML 모듈 (api/services에서 import)
+│       ├── __init__.py
+│       ├── preprocessor.py          # 입력 벡터화 (StandardScaler, One-Hot)
+│       ├── cosine_model.py          # Cosine Similarity 추천 엔진
+│       ├── kmeans_model.py          # K-Means 기업 유형 분류
+│       └── isolation_model.py       # Isolation Forest 리스크 분석
+│
+├── data/
+│   ├── raw/                         # 원본 공공데이터 CSV (23개)
+│   │
+│   ├── processed/                   # 전처리 결과 JSON (API가 로드)
+│   │   ├── fund_patterns.json       # 정책자금별 표준 수혜 패턴 벡터
+│   │   ├── fund_info.json           # 자금명 · 한도 · 금리
+│   │   ├── exclusion_rules.json     # 융자제외 업종 33개
+│   │   └── debt_limits.json         # 업종별 부채비율 제한
+│   │
+│   └── scripts/
+│       ├── preprocess.py            # CSV → JSON 전처리 메인
+│       └── generate_patterns.py     # 표준 수혜 패턴 벡터 생성
+│
+├── package.json                     # workspaces 설정
+├── turbo.json                       # Turborepo 빌드 파이프라인
+├── docker-compose.yml
+├── .env.example
+├── .gitignore
+└── README.md
 ```
 
 ---
