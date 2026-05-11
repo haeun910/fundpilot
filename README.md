@@ -152,7 +152,6 @@ fund_patterns.json     정책자금별 수혜 패턴 벡터
 ### 2. API 서버
 
 ```bash
-cd apps/api
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
